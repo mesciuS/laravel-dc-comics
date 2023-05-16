@@ -1,4 +1,4 @@
 @extends('layouts/main')
 @section('content')
-    prova
+    <h1><a href="{{route('comics.index')}}">FUMETTOPOLI</a></h1>
 @endsection
