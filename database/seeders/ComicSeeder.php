@@ -15,6 +15,7 @@ class ComicSeeder extends Seeder
      */
     public function run()
     {
+        // credo un array dal nostro file config
         $arrayComics = config('comics');
         foreach($arrayComics as $singleComic) {
             $newComic = new Comic();

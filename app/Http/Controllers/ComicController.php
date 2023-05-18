@@ -14,6 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
+        // devo restituire il model a questa view altrimenti non si vedranno in pagina
         $comics = Comic::all();
         return view('comics/index', compact('comics'));
     }
@@ -47,7 +48,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        return view('comics/show', compact('comic'));
     }
 
     /**
