@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Comic extends Model
 {
     use HasFactory;
+    // metodo per passare tutte gli input del form, continua nel controller store()
+    protected $fillable = ['title', 'description', 'thumb', 'price', 'series', 'sale_date', 'type', 'artists', 'writers'];
 }

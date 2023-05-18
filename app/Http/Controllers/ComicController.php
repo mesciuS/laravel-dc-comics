@@ -41,15 +41,19 @@ class ComicController extends Controller
         // mi salvo le request in una variabile
         $formData = $request->all();
         $newComic = new Comic();
-        $newComic->title = $formData['title'];
-        $newComic->description = $formData['description'];
-        $newComic->thumb = $formData['thumb'];
-        $newComic->price = $formData['price'];
-        $newComic->series = $formData['series'];
-        $newComic->sale_date = $formData['sale_date'];
-        $newComic->type = $formData['type'];
-        $newComic->artists = $formData['artists'];
-        $newComic->writers = $formData['writers'];
+
+        // metodo per evitarsi di scrivere quello commentato sotto, continua nel model
+        $newComic->fill($formData);
+
+        // $newComic->title = $formData['title'];
+        // $newComic->description = $formData['description'];
+        // $newComic->thumb = $formData['thumb'];
+        // $newComic->price = $formData['price'];
+        // $newComic->series = $formData['series'];
+        // $newComic->sale_date = $formData['sale_date'];
+        // $newComic->type = $formData['type'];
+        // $newComic->artists = $formData['artists'];
+        // $newComic->writers = $formData['writers'];
 
 
         $newComic->save();
