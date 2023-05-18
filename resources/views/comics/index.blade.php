@@ -12,5 +12,8 @@
             </div>
         </div>
         @endforeach
+        <section>
+            <a href="{{route('comics.create')}}" class="btn btn-primary">Crea un fumetto?</a>
+        </section>
     </div>
 @endsection
