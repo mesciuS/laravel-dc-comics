@@ -9,6 +9,7 @@
               <p class="card-text">{{$singleComic->price}}</p>
               {{-- alla route devo aggiungere l'id altrimenti non va da nessuna parte --}}
               <a href="{{route('comics.show', $singleComic->id)}}" class="btn btn-primary">Dettagli</a>
+              <a href="{{route('comics.edit', $singleComic->id)}}" class="btn btn-primary">Modifica</a>
             </div>
         </div>
         @endforeach
