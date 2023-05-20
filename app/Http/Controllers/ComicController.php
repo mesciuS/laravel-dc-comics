@@ -37,6 +37,20 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        //per creare una validazione la sintassi è la seguente, segue poi nella blade del create
+        $request->validate([
+            // title, description etc sono i valori dati a name nell'html di input
+            'title' => 'required|min:2',
+            'description' => 'nullable',
+            'thumb' => 'required',
+            'price' => 'required',
+            'series' => 'required',
+            'sale_date' => 'required',
+            'type' => 'required',
+            'artists' => 'required',
+            'writers' => 'required',
+        ]);
+
         // dd($request-all()); -> tramite questo controllo che il mio form e relativo submit funzionano
         // mi salvo le request in una variabile
         $formData = $request->all();
